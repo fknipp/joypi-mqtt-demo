@@ -10,7 +10,11 @@ This demo project consists of the following components:
 
 Used hardware: [Joy-Pi experimental case](https://joy-it.net/en/products/RB-JoyPi)
 
+![Joy-Pi](img/JoyPi-MQTT.jpg)
+
 The sensor is the blue part in the lower part.
+
+![Streamsheets](img/Streamsheets.png)
 
 ## Installation
 
