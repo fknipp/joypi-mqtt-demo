@@ -20,7 +20,7 @@ The sensor is the blue part in the lower part.
 ## Preparation of Streamsheets
 
 1. Start Streamsheets by executing `./start.sh`.
-1. Open Streamsheets in the browser on http://<ip address>:8081
+1. Open Streamsheets in the browser on http://_ip address_:8081
 1. Login using your credentials.
 1. Import the [Streamsheets app](Demo_with_Raspberry.streamsheets.json) .
 1. Create the necessary MQTT connector and streams. It uses the local MQTT broker, which is already created by the installation. The topic of the connector is _tutorial/_. The topic of the consumer stream is _joy1_.
