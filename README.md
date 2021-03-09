@@ -36,3 +36,7 @@ The sensor is the blue part in the lower part.
 1. Run `./send_mqtt.py` in one terminal.
 1. Run `./receive_mqtt.py` in the other terminal.
 1. Enjoy it!
+
+## About the project
+
+This project was created as a demo at the [University of Applied Sciences Burgenland](https://www.fh-burgenland.at).
