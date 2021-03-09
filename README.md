@@ -39,4 +39,4 @@ The sensor is the blue part in the lower part.
 
 ## About the project
 
-This project was created as a demo at the [University of Applied Sciences Burgenland](https://www.fh-burgenland.at).
+This project was created for a demo at the [University of Applied Sciences Burgenland](https://www.fh-burgenland.at).
