@@ -20,6 +20,7 @@ The sensor is the blue part in the lower part.
 
 1. Install [https://projects.eclipse.org/projects/iot.streamsheets](Streamsheets). It runs the MQTT broker. I've installed it on a virtual machine running Debian.
 1. Install the necessary libraries to run the DHT11 sensor and the LED matrix as written in the [manual](https://joy-pi.net/wp-content/uploads/2020/09/RB-JoyPi-Manual-29-09-2020-1.pdf) ([German version](https://joy-pi.net/wp-content/uploads/2020/09/RB-JoyPi-Anleitung-29-09-2020-1.pdf)).
+1. Install Paho MQTT on the Raspberry Pi.
 
 ## Preparation of Streamsheets
 
