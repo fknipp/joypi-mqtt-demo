@@ -28,12 +28,13 @@ The sensor is the blue part in the lower part.
 1. Open Streamsheets in the browser on http://_ip address_:8081
 1. Login using your credentials.
 1. Import the [Streamsheets app](Demo_with_Raspberry.streamsheets.json) .
-1. Create the necessary MQTT connector and streams. It uses the local MQTT broker, which is already created by the installation. The topic of the connector is _tutorial/_. The topic of the consumer stream is _joy1_.
+1. Create the necessary MQTT connector and streams. It uses the local MQTT broker, which is already created by the installation. The topic of the connector is _tutorial/_. The topic of the consumer stream is _joy1_.  
+![Connector, Consumer and Producer](img/MQTT_Connector.png)
 1. Run the app by pressing the start button on the sheet.
 
 ## Preparation on Raspberry Pi
 
-1. Set the following environment variables **MQTT_SERVER**, **MQTT_USERNAME** (most probably *cedalo*) and **MQTT_PASSWORD** (see the password on the connector settings).
+1. Set the following environment variables **MQTT_SERVER**, **MQTT_USERNAME** (most probably *streamsheets*) and **MQTT_PASSWORD** (see the password on the connector settings).
 1. Run `./send_mqtt.py` in one terminal.
 1. Run `./receive_mqtt.py` in the other terminal.
 1. Enjoy it!
