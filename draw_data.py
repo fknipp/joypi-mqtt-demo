@@ -25,6 +25,10 @@ def draw_data(device, data):
         draw.rectangle([1, 4, 2, 4 - delta_t], fill="red")
         draw.rectangle([5, 4, 6, 4 - delta_h], fill="red")
 
+def fill(device, data):
+    with canvas(device) as draw:
+        fill = "red" if data else "black"
+        draw.rectangle(device.bounding_box, fill=fill)
 
 if __name__ == "__main__":
     device = get_device()
