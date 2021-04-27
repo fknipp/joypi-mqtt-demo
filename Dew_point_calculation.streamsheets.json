@@ -1,0 +1,1657 @@
+{
+  "version": 2,
+  "machines": [
+    {
+      "machine": {
+        "id": "HyZUPv9Wwd",
+        "name": "Taupunkt-Berechnung Linuxwochen Eisenstadt",
+        "state": "stopped",
+        "metadata": {
+          "owner": "anon",
+          "lastModified": 1619272970452,
+          "lastModifiedBy": "unknown",
+          "fileVersion": "2.0.0"
+        },
+        "streamsheets": [
+          {
+            "id": "ryNIvPq-Du",
+            "name": "S1",
+            "loop": {
+              "path": "",
+              "enabled": false,
+              "recursively": false
+            },
+            "inbox": {
+              "max": 20,
+              "type": "MessageBox",
+              "id": "B1BUPD5WD_",
+              "stream": {
+                "name": "MQTT_Consumer_Linuxwochen_Eisenstadt",
+                "id": "SkxlSs9WDd",
+                "stream": {
+                  "_id": "SkxlSs9WDd",
+                  "id": "SkxlSs9WDd",
+                  "name": "MQTT_Consumer_Linuxwochen_Eisenstadt",
+                  "className": "ConsumerConfiguration",
+                  "lastModified": "2021-04-24T13:21:09.514Z",
+                  "lastAccessed": "2021-04-24T13:20:56.101Z",
+                  "connector": {
+                    "_id": "HJgcyj9Zvu",
+                    "id": "HJgcyj9Zvu",
+                    "className": "ConnectorConfiguration",
+                    "disabled": false,
+                    "lastModified": "2021-04-24T13:19:30.494Z",
+                    "lastAccessed": "2021-04-24T13:19:30.494Z",
+                    "isRef": true
+                  },
+                  "providerId": "@cedalo/stream-mqtt",
+                  "mimeType": "auto",
+                  "fixedClientId": false,
+                  "clientId": "",
+                  "clean": true,
+                  "userPropertiesSubscribe": [],
+                  "topics": [
+                    "tutorial/joy1"
+                  ],
+                  "scope": {
+                    "id": "root"
+                  },
+                  "state": "connected",
+                  "provider": {
+                    "id": "@cedalo/stream-mqtt",
+                    "name": "MQTT Provider",
+                    "className": "ProviderConfiguration",
+                    "canProduce": true,
+                    "canConsume": true,
+                    "definition": {
+                      "connector": [
+                        {
+                          "id": "protocolVersion",
+                          "type": "SELECT_NUM",
+                          "label": "Protocol Version",
+                          "defaultValue": 4,
+                          "options": [
+                            {
+                              "label": "MQTT v5.0",
+                              "value": 5
+                            },
+                            {
+                              "label": "MQTT v3.1.1",
+                              "value": 4
+                            }
+                          ],
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": 4,
+                          "advanced": true,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "url",
+                          "type": null,
+                          "label": "URL",
+                          "defaultValue": "mqtt://mosquitto",
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": "mqtt://mosquitto",
+                          "advanced": false,
+                          "disabled": false,
+                          "help": "mqtt://, mqtts://, tcp://,tls://, ws://, wss://"
+                        },
+                        {
+                          "id": "userPropertiesConnect",
+                          "type": "MULTITEXTFIELDPAIRS",
+                          "label": {
+                            "en": "User Properties (connect)",
+                            "de": "User Properties (connect)"
+                          },
+                          "defaultValue": [],
+                          "options": null,
+                          "dependsOnPath": "protocolVersion",
+                          "dependsOnValue": [
+                            5
+                          ],
+                          "required": null,
+                          "onUpdate": null,
+                          "value": [],
+                          "advanced": true,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "userName",
+                          "type": null,
+                          "label": {
+                            "en": "User Name",
+                            "de": "Benutzername"
+                          },
+                          "defaultValue": "",
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": "",
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "password",
+                          "type": "PASSWORD",
+                          "label": {
+                            "en": "Password",
+                            "de": "Kennwort"
+                          },
+                          "defaultValue": "",
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": "",
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "baseTopic",
+                          "type": null,
+                          "label": {
+                            "en": "Base Topic",
+                            "de": "Basistopic"
+                          },
+                          "defaultValue": "",
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": "",
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "retain",
+                          "type": "CHECKBOX",
+                          "label": {
+                            "en": "Retain Message",
+                            "de": "Nachricht behalten"
+                          },
+                          "defaultValue": false,
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": false,
+                          "advanced": true,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "qos",
+                          "type": "SELECT_NUM",
+                          "label": "QoS",
+                          "defaultValue": 0,
+                          "options": [
+                            {
+                              "label": {
+                                "en": "At most once (0)",
+                                "de": "Höchstens einmal (0)"
+                              },
+                              "value": 0
+                            },
+                            {
+                              "label": {
+                                "en": "At least once (1)",
+                                "de": "Mindestens einmal (0)"
+                              },
+                              "value": 1
+                            },
+                            {
+                              "label": {
+                                "en": "Exactly once (2)",
+                                "de": "Genau einmal (2)"
+                              },
+                              "value": 2
+                            }
+                          ],
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": 0,
+                          "advanced": true,
+                          "disabled": false,
+                          "help": null
+                        }
+                      ],
+                      "consumer": [
+                        {
+                          "id": "fixedClientId",
+                          "type": "CHECKBOX",
+                          "label": {
+                            "en": "Static Client Id",
+                            "de": "Statische Client Id"
+                          },
+                          "defaultValue": false,
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": false,
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "clientId",
+                          "type": "RANDOM_STRING",
+                          "label": {
+                            "en": "Client Id",
+                            "de": "Client Id"
+                          },
+                          "defaultValue": "",
+                          "options": null,
+                          "dependsOnPath": "fixedClientId",
+                          "dependsOnValue": [
+                            true
+                          ],
+                          "required": null,
+                          "onUpdate": null,
+                          "value": "",
+                          "advanced": false,
+                          "disabled": false,
+                          "help": {
+                            "en": "The Client Id is used for identification of the client by the broker. Identical Client Ids can lead to unforeseeable effects on the broker and the system!",
+                            "de": "Die Client Id wird vom Broker zur Identifizierung des Clients verwendet. Identische Client Ids können zu unvorhersehbaren Auswirkungen auf den Broker und das System führen!"
+                          }
+                        },
+                        {
+                          "id": "clean",
+                          "type": "CHECKBOX",
+                          "label": {
+                            "en": "Clean",
+                            "de": "Clean"
+                          },
+                          "defaultValue": true,
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": true,
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "userPropertiesSubscribe",
+                          "type": "MULTITEXTFIELDPAIRS",
+                          "label": {
+                            "en": "User Properties (subscribe)",
+                            "de": "User Properties (subscribe)"
+                          },
+                          "defaultValue": [],
+                          "options": null,
+                          "dependsOnPath": "protocolVersion",
+                          "dependsOnValue": [
+                            5
+                          ],
+                          "required": null,
+                          "onUpdate": null,
+                          "value": [],
+                          "advanced": true,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "topics",
+                          "type": "TEXTLIST",
+                          "label": {
+                            "en": "MQTT Topics (extending base topic)",
+                            "de": "MQTT Topics (erweitert das Basistopic)"
+                          },
+                          "defaultValue": [],
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": [],
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        }
+                      ],
+                      "producer": [
+                        {
+                          "id": "fixedClientId",
+                          "type": "CHECKBOX",
+                          "label": {
+                            "en": "Static Client Id",
+                            "de": "Statische Client Id"
+                          },
+                          "defaultValue": false,
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": false,
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "clientId",
+                          "type": "RANDOM_STRING",
+                          "label": {
+                            "en": "Client Id",
+                            "de": "Client Id"
+                          },
+                          "defaultValue": "",
+                          "options": null,
+                          "dependsOnPath": "fixedClientId",
+                          "dependsOnValue": [
+                            true
+                          ],
+                          "required": null,
+                          "onUpdate": null,
+                          "value": "",
+                          "advanced": false,
+                          "disabled": false,
+                          "help": {
+                            "en": "The Client Id is used for identification of the client by the broker. Identical Client Ids can lead to unforeseeable effects on the broker and the system!",
+                            "de": "Die Client Id wird vom Broker zur Identifizierung des Clients verwendet. Identische Client Ids können zu unvorhersehbaren Auswirkungen auf den Broker und das System führen!"
+                          }
+                        },
+                        {
+                          "id": "clean",
+                          "type": "CHECKBOX",
+                          "label": {
+                            "en": "Clean",
+                            "de": "Clean"
+                          },
+                          "defaultValue": true,
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": true,
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "pubTopic",
+                          "type": "TEXT",
+                          "label": {
+                            "en": "Topic",
+                            "de": "Topic"
+                          },
+                          "defaultValue": "",
+                          "options": null,
+                          "dependsOnPath": null,
+                          "dependsOnValue": null,
+                          "required": null,
+                          "onUpdate": null,
+                          "value": "",
+                          "advanced": false,
+                          "disabled": false,
+                          "help": null
+                        },
+                        {
+                          "id": "userPropertiesProduce",
+                          "type": "MULTITEXTFIELDPAIRS",
+                          "label": {
+                            "en": "User Properties (produce)",
+                            "de": "User Properties (produce)"
+                          },
+                          "defaultValue": [],
+                          "options": null,
+                          "dependsOnPath": "protocolVersion",
+                          "dependsOnValue": [
+                            5
+                          ],
+                          "required": null,
+                          "onUpdate": null,
+                          "value": [],
+                          "advanced": true,
+                          "disabled": false,
+                          "help": null
+                        }
+                      ],
+                      "functions": [
+                        {
+                          "name": "MQTT.PUBLISH",
+                          "displayName": true,
+                          "baseFunction": "produce",
+                          "parameters": [
+                            {
+                              "id": "message",
+                              "label": {
+                                "en": "Message",
+                                "de": "Nachricht"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "union",
+                                "types": [
+                                  {
+                                    "name": "json"
+                                  },
+                                  {
+                                    "name": "number"
+                                  },
+                                  {
+                                    "name": "string"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "topic",
+                              "label": {
+                                "en": "Topic",
+                                "de": "Topic"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "mqtt_topic",
+                                "context": "publish"
+                              }
+                            },
+                            {
+                              "id": "qos",
+                              "label": {
+                                "en": "QualityOfService",
+                                "de": "QualityOfService"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "integer",
+                                "min": 0,
+                                "max": 2
+                              },
+                              "optional": true
+                            },
+                            {
+                              "id": "userProperties",
+                              "label": {
+                                "en": "User Properties",
+                                "de": "User Properties"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "union",
+                                "types": [
+                                  {
+                                    "name": "json"
+                                  },
+                                  {
+                                    "name": "number"
+                                  },
+                                  {
+                                    "name": "string"
+                                  }
+                                ]
+                              },
+                              "optional": true
+                            }
+                          ]
+                        },
+                        {
+                          "name": "PUBLISH",
+                          "displayName": true,
+                          "baseFunction": "produce",
+                          "parameters": [
+                            {
+                              "id": "message",
+                              "label": {
+                                "en": "Message",
+                                "de": "Nachricht"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "union",
+                                "types": [
+                                  {
+                                    "name": "json"
+                                  },
+                                  {
+                                    "name": "number"
+                                  },
+                                  {
+                                    "name": "string"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "topic",
+                              "label": {
+                                "en": "Topic",
+                                "de": "Topic"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "mqtt_topic",
+                                "context": "publish"
+                              }
+                            },
+                            {
+                              "id": "qos",
+                              "label": {
+                                "en": "QualityOfService",
+                                "de": "QualityOfService"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "integer",
+                                "min": 0,
+                                "max": 2
+                              },
+                              "optional": true
+                            },
+                            {
+                              "id": "userProperties",
+                              "label": {
+                                "en": "User Properties",
+                                "de": "User Properties"
+                              },
+                              "description": "",
+                              "type": {
+                                "name": "union",
+                                "types": [
+                                  {
+                                    "name": "json"
+                                  },
+                                  {
+                                    "name": "number"
+                                  },
+                                  {
+                                    "name": "string"
+                                  }
+                                ]
+                              },
+                              "optional": true
+                            }
+                          ],
+                          "deprecated": true
+                        }
+                      ]
+                    },
+                    "lastModified": "2021-04-24T11:44:31.248Z",
+                    "state": "disconnected"
+                  }
+                }
+              }
+            },
+            "sheet": {
+              "cells": {
+                "A3": {
+                  "formula": "READ(INBOXDATA(,,\"temperature\"),B3,\"Number\",,TRUE)",
+                  "value": "temperature",
+                  "type": "undefined",
+                  "level": 0
+                },
+                "B3": {
+                  "value": 28.6,
+                  "type": "number",
+                  "level": 0
+                },
+                "C3": {
+                  "value": "°C",
+                  "type": "string",
+                  "level": 0
+                },
+                "E3": {
+                  "value": "K2",
+                  "type": "string",
+                  "level": 0
+                },
+                "F3": {
+                  "formula": "IF(B3<0,22.46,17.62)",
+                  "value": 17.62,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "A4": {
+                  "formula": "READ(INBOXDATA(,,\"humidity\"),B4,\"Number\",,TRUE)",
+                  "value": "humidity",
+                  "type": "undefined",
+                  "level": 0
+                },
+                "B4": {
+                  "value": 33,
+                  "type": "number",
+                  "level": 0
+                },
+                "C4": {
+                  "value": "%",
+                  "type": "string",
+                  "level": 0
+                },
+                "E4": {
+                  "value": "K3",
+                  "type": "string",
+                  "level": 0
+                },
+                "F4": {
+                  "formula": "IF(B3<0,272.62,243.12)",
+                  "value": 243.12,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "E5": {
+                  "value": "E",
+                  "type": "string",
+                  "level": 0
+                },
+                "F5": {
+                  "value": 2.7182818,
+                  "type": "number",
+                  "level": 0
+                },
+                "A6": {
+                  "value": "Taupunkt",
+                  "type": "string",
+                  "level": 0
+                },
+                "B6": {
+                  "formula": "F4*(F3*B3/(F4+B3)+LOG(B4/100,F5))/(F3*F4/(F4+B3)-LOG(B4/100,F5))",
+                  "value": 10.747404346733658,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "C6": {
+                  "value": "°C",
+                  "type": "string",
+                  "level": 0
+                },
+                "A7": {
+                  "value": "Spread",
+                  "type": "string",
+                  "level": 0
+                },
+                "B7": {
+                  "formula": "B3-B6",
+                  "value": 17.85259565326634,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "C7": {
+                  "value": "K",
+                  "type": "string",
+                  "level": 0
+                },
+                "D7": {
+                  "value": "Taupunkt",
+                  "type": "string",
+                  "level": 0
+                },
+                "E7": {
+                  "formula": "TIMEAGGREGATE(B6,600,0)",
+                  "value": 10.747404346733658,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "D8": {
+                  "value": "Spread",
+                  "type": "string",
+                  "level": 0
+                },
+                "E8": {
+                  "formula": "TIMEAGGREGATE(B7,600,0)",
+                  "value": 17.85259565326634,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "D9": {
+                  "value": "Relative Feuchte",
+                  "type": "string",
+                  "level": 0
+                },
+                "E9": {
+                  "formula": "TIMEAGGREGATE(B4,600,0)",
+                  "value": 33,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "A10": {
+                  "value": "Schwellwert",
+                  "type": "string",
+                  "level": 0
+                },
+                "B10": {
+                  "value": 10,
+                  "type": "number",
+                  "level": 0
+                },
+                "C10": {
+                  "value": "K",
+                  "type": "string",
+                  "level": 0
+                },
+                "A11": {
+                  "value": "Alarm",
+                  "type": "string",
+                  "level": 0
+                },
+                "B11": {
+                  "formula": "B7<B10",
+                  "value": false,
+                  "type": "undefined",
+                  "level": 0
+                },
+                "A12": {
+                  "formula": "MQTT.PUBLISH(|MQTT_Producer_Linuxwochen_Eisenstadt,JSON(A11:B11),\"tutorial/joy1-alarm\")",
+                  "value": true,
+                  "type": "undefined",
+                  "level": 0,
+                  "references": [
+                    "|MQTT_Producer_Linuxwochen_Eisenstadt"
+                  ]
+                }
+              },
+              "namedCells": {},
+              "shapes": {
+                "shapes": [
+                  {
+                    "id": 121771969619,
+                    "parent": 1028,
+                    "itemType": "streamchart",
+                    "x": {
+                      "v": "17230.416666666664"
+                    },
+                    "y": {
+                      "v": "3019.8333333333326"
+                    },
+                    "localX": {
+                      "f": "WIDTH%20*%200.5",
+                      "v": "4519.083333333334"
+                    },
+                    "localY": {
+                      "f": "HEIGHT%20*%200.5",
+                      "v": "2497.666666666666"
+                    },
+                    "width": {
+                      "v": "9038.166666666668"
+                    },
+                    "height": {
+                      "v": "4995.333333333332"
+                    },
+                    "name": "Streamchart1",
+                    "shape": {
+                      "type": "rectangle"
+                    },
+                    "format": {
+                      "linecolor": {
+                        "v": "%23AAAAAA",
+                        "t": "s"
+                      }
+                    },
+                    "attributes": {
+                      "container": {
+                        "v": "false",
+                        "t": "b"
+                      },
+                      "portmode": {
+                        "v": "0"
+                      }
+                    },
+                    "chart": {
+                      "o-chart": {
+                        "type": "line",
+                        "template": "basic",
+                        "o-formula": {
+                          "f": "D9%3AE9",
+                          "v": "0"
+                        },
+                        "o-hilolines": {
+                          "visible": "0"
+                        },
+                        "o-serieslines": {
+                          "visible": "0"
+                        },
+                        "o-upbars": {
+                          "visible": "0"
+                        },
+                        "o-downbars": {
+                          "visible": "0"
+                        }
+                      },
+                      "o-plot": {},
+                      "o-title": {
+                        "align": "center",
+                        "visible": "1",
+                        "o-formula": {
+                          "v": "Rel%20Feuchte",
+                          "t": "s",
+                          "msc": true,
+                          "sv": "Rel%20Feuchte"
+                        }
+                      },
+                      "a-series": [
+                        {
+                          "type": "line",
+                          "bargap": "0.3",
+                          "o-formula": {
+                            "f": "SERIESTIME(~22time~22%2CD9%2CE9%2C~22time~22%2C~22value~22)",
+                            "v": "0"
+                          },
+                          "o-datalabel": {
+                            "position": "above",
+                            "o-format": {
+                              "o-font": {
+                                "linknumberformat": "1"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "a-xaxis": [
+                        {
+                          "align": "bottom",
+                          "type": "time",
+                          "name": "XAxis1",
+                          "position": "976.25 4277.833333333332 8369.444203687635 4795.333333333332",
+                          "o-formula": {
+                            "f": "AXIS()",
+                            "v": "0"
+                          },
+                          "o-format": {
+                            "o-font": {
+                              "number": "h:mm:ss",
+                              "local": "time;en",
+                              "linknumberformat": "1"
+                            }
+                          },
+                          "o-axistitle": {
+                            "align": "center",
+                            "visible": "0",
+                            "o-formula": {
+                              "f": "",
+                              "v": "Title",
+                              "t": "s"
+                            }
+                          }
+                        }
+                      ],
+                      "a-yaxis": [
+                        {
+                          "align": "left",
+                          "type": "linear",
+                          "name": "YAxis1",
+                          "position": "300 1202.7083333333333 976.25 4277.833333333332",
+                          "o-formula": {
+                            "f": "AXIS(0%2C100)",
+                            "v": "0"
+                          },
+                          "o-format": {
+                            "o-font": {
+                              "linknumberformat": "1"
+                            }
+                          },
+                          "o-axistitle": {
+                            "align": "center",
+                            "visible": "0",
+                            "o-formula": {
+                              "f": "",
+                              "v": "Title",
+                              "t": "s"
+                            }
+                          }
+                        }
+                      ],
+                      "o-legend": {
+                        "visible": "0",
+                        "align": "middleright",
+                        "o-formula": {
+                          "f": "",
+                          "v": "Legend",
+                          "t": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": 662472112790,
+                    "parent": 1028,
+                    "itemType": "streamchart",
+                    "x": {
+                      "v": "17230.416666666664"
+                    },
+                    "y": {
+                      "v": "8025.749999999999"
+                    },
+                    "localX": {
+                      "f": "WIDTH%20*%200.5",
+                      "v": "4540.249999999998"
+                    },
+                    "localY": {
+                      "f": "HEIGHT%20*%200.5",
+                      "v": "2487.083333333333"
+                    },
+                    "width": {
+                      "v": "9080.499999999996"
+                    },
+                    "height": {
+                      "v": "4974.166666666666"
+                    },
+                    "name": "Streamchart2",
+                    "shape": {
+                      "type": "rectangle"
+                    },
+                    "format": {
+                      "linecolor": {
+                        "v": "%23AAAAAA",
+                        "t": "s"
+                      }
+                    },
+                    "attributes": {
+                      "container": {
+                        "v": "false",
+                        "t": "b"
+                      },
+                      "portmode": {
+                        "v": "0"
+                      }
+                    },
+                    "chart": {
+                      "o-chart": {
+                        "type": "areastacked",
+                        "template": "basic",
+                        "stacked": "1",
+                        "o-formula": {
+                          "f": "D7%3AE8",
+                          "v": "0"
+                        },
+                        "o-hilolines": {
+                          "visible": "0"
+                        },
+                        "o-serieslines": {
+                          "visible": "0"
+                        },
+                        "o-upbars": {
+                          "visible": "0"
+                        },
+                        "o-downbars": {
+                          "visible": "0"
+                        }
+                      },
+                      "o-plot": {},
+                      "o-title": {
+                        "align": "center",
+                        "visible": "1",
+                        "o-formula": {
+                          "v": "Temperaturverlauf",
+                          "t": "s",
+                          "msc": true,
+                          "sv": "Temperaturverlauf"
+                        }
+                      },
+                      "a-series": [
+                        {
+                          "type": "area",
+                          "bargap": "0.3",
+                          "o-formula": {
+                            "f": "SERIESTIME(~22time~22%2CS1!D7%2CS1!E7%2C~22time~22%2C~22value~22)",
+                            "v": "0"
+                          },
+                          "o-datalabel": {
+                            "o-format": {
+                              "o-font": {
+                                "linknumberformat": "1"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "type": "area",
+                          "bargap": "0.3",
+                          "o-formula": {
+                            "f": "SERIESTIME(~22time~22%2CS1!D8%2CS1!E8%2C~22time~22%2C~22value~22)",
+                            "v": "0"
+                          },
+                          "o-datalabel": {
+                            "o-format": {
+                              "o-font": {
+                                "linknumberformat": "1"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "a-xaxis": [
+                        {
+                          "align": "bottom",
+                          "type": "time",
+                          "name": "XAxis1",
+                          "position": "817.5 4256.666666666666 6229.562499999996 4774.166666666666",
+                          "o-formula": {
+                            "f": "AXIS()",
+                            "v": "0"
+                          },
+                          "o-format": {
+                            "o-font": {
+                              "number": "h:mm:ss",
+                              "local": "time;en",
+                              "linknumberformat": "1"
+                            }
+                          },
+                          "o-axistitle": {
+                            "align": "center",
+                            "visible": "0",
+                            "o-formula": {
+                              "f": "",
+                              "v": "Title",
+                              "t": "s"
+                            }
+                          }
+                        }
+                      ],
+                      "a-yaxis": [
+                        {
+                          "align": "left",
+                          "type": "linear",
+                          "name": "YAxis1",
+                          "position": "300 1202.7083333333333 817.5 4256.666666666666",
+                          "o-formula": {
+                            "f": "AXIS()",
+                            "v": "0"
+                          },
+                          "o-format": {
+                            "o-font": {
+                              "linknumberformat": "1"
+                            }
+                          },
+                          "o-axistitle": {
+                            "align": "center",
+                            "visible": "0",
+                            "o-formula": {
+                              "f": "",
+                              "v": "Title",
+                              "t": "s"
+                            }
+                          }
+                        }
+                      ],
+                      "o-legend": {
+                        "visible": "1",
+                        "align": "middleright",
+                        "o-formula": {
+                          "f": "",
+                          "v": "Legend",
+                          "t": "s"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "id": 827711993278,
+                    "parent": 1028,
+                    "itemType": "node",
+                    "x": {
+                      "v": "3715.4999999999995"
+                    },
+                    "y": {
+                      "v": "7983.416666666666"
+                    },
+                    "localX": {
+                      "f": "WIDTH%20*%200.5",
+                      "v": "3005.6666666666665"
+                    },
+                    "localY": {
+                      "f": "HEIGHT%20*%200.5",
+                      "v": "2000.25"
+                    },
+                    "width": {
+                      "v": "6011.333333333333"
+                    },
+                    "height": {
+                      "v": "4000.5"
+                    },
+                    "name": "Rectangle9",
+                    "shape": {
+                      "type": "rectangle"
+                    },
+                    "format": {
+                      "fillcolor": {
+                        "f": "IF(B11%2C~22%23ff0000~22%2C~22%23ffffff~22)",
+                        "v": "%23ffffff",
+                        "t": "s",
+                        "msc": true,
+                        "sv": "#ffffff"
+                      }
+                    },
+                    "textformat": {
+                      "fontsize": {
+                        "v": "14"
+                      }
+                    }
+                  },
+                  {
+                    "id": 169214819147,
+                    "parent": 827711993278,
+                    "itemType": "text",
+                    "x": {
+                      "v": "3005.6666666666665"
+                    },
+                    "y": {
+                      "v": "2000.25"
+                    },
+                    "localX": {
+                      "f": "WIDTH%20*%200.5",
+                      "v": "2992.437459627787"
+                    },
+                    "localY": {
+                      "f": "HEIGHT%20*%200.5",
+                      "v": "1212.6736783981323"
+                    },
+                    "width": {
+                      "v": "5984.874919255574"
+                    },
+                    "height": {
+                      "v": "2425.3473567962646"
+                    },
+                    "name": "Label1",
+                    "shape": {
+                      "type": "rectangle"
+                    },
+                    "format": {
+                      "linestyle": {
+                        "v": "0"
+                      },
+                      "fillstyle": {
+                        "v": "0"
+                      }
+                    },
+                    "textformat": {
+                      "richtext": {
+                        "v": "false",
+                        "t": "b"
+                      },
+                      "fontsize": {
+                        "v": "14"
+                      }
+                    },
+                    "text": {
+                      "v": "~3Cp~3EALARM~3C%2Fp~3E~3Cp~3E~3Cbr~3EBeheizung%20erforderlich~3Cbr~3E~3C%2Fp~3E",
+                      "t": "s"
+                    }
+                  }
+                ],
+                "changed": 221897201902,
+                "version": 1
+              },
+              "properties": {
+                "sheet": {},
+                "cols": {},
+                "rows": {},
+                "cells": {}
+              },
+              "settings": {
+                "minrow": 1,
+                "maxrow": 100,
+                "mincol": -2,
+                "maxcol": 50,
+                "protected": false
+              }
+            },
+            "trigger": {
+              "repeat": "once",
+              "type": "arrival"
+            }
+          }
+        ],
+        "settings": {
+          "view": {
+            "maximize": "ryNIvPq-Du",
+            "showInbox": false,
+            "showGrid": false,
+            "showHeader": false,
+            "showOutbox": false,
+            "allowZoom": false,
+            "allowScroll": true
+          },
+          "locale": "en",
+          "isOPCUA": false,
+          "cycletime": 100
+        },
+        "className": "Machine",
+        "scope": {
+          "id": "root"
+        },
+        "namedCells": {
+          "|HTTP_Client_Producer": {
+            "value": {
+              "id": "PRODUCER_HTTP",
+              "name": "HTTP_Client_Producer",
+              "type": "producer",
+              "state": "connected",
+              "timestamp": 1619264671356,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|Webhook": {
+            "value": {
+              "id": "CONSUMER_WEBHOOK",
+              "name": "Webhook",
+              "type": "stream",
+              "state": "connected",
+              "timestamp": 1619264671379,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Consumer_Tutorial": {
+            "value": {
+              "id": "BklS4KhpIu",
+              "name": "MQTT_Consumer_Tutorial",
+              "type": "stream",
+              "state": "connected",
+              "timestamp": 1619264671404,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|Wind_Data": {
+            "value": {
+              "id": "HkZRIJtchH",
+              "name": "Wind_Data",
+              "type": "stream",
+              "state": "connected",
+              "timestamp": 1619264671409,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Consumer": {
+            "value": {
+              "id": "CONSUMER_MQTT",
+              "name": "MQTT_Consumer",
+              "type": "stream",
+              "state": "connected",
+              "timestamp": 1619264671410,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Consumer_Demo": {
+            "value": {
+              "id": "rygOhXhgPO",
+              "name": "MQTT_Consumer_Demo",
+              "type": "stream",
+              "state": "connected",
+              "timestamp": 1619264671413,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Producer_Tutorial": {
+            "value": {
+              "id": "Bkg3Pth6Iu",
+              "name": "MQTT_Producer_Tutorial",
+              "type": "producer",
+              "state": "connected",
+              "timestamp": 1619264671416,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Producer_Demo": {
+            "value": {
+              "id": "HyxdG33xvO",
+              "name": "MQTT_Producer_Demo",
+              "type": "producer",
+              "state": "connected",
+              "timestamp": 1619264671417,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Producer": {
+            "value": {
+              "id": "PRODUCER_MQTT",
+              "name": "MQTT_Producer",
+              "type": "producer",
+              "state": "connected",
+              "timestamp": 1619264671418,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Consumer_Linuxwochen_Eisenstadt": {
+            "value": {
+              "id": "SkxlSs9WDd",
+              "name": "MQTT_Consumer_Linuxwochen_Eisenstadt",
+              "type": "stream",
+              "state": "connected",
+              "timestamp": 1619270469532,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          },
+          "|MQTT_Producer_Linuxwochen_Eisenstadt": {
+            "value": {
+              "id": "ryexXEs-DO",
+              "name": "MQTT_Producer_Linuxwochen_Eisenstadt",
+              "type": "producer",
+              "state": "connected",
+              "timestamp": 1619272732975,
+              "scope": {
+                "id": "root"
+              }
+            },
+            "type": "object",
+            "info": {
+              "rawtype": "object"
+            },
+            "level": 0
+          }
+        }
+      },
+      "graph": {
+        "id": "SyLPwq-DO",
+        "graphdef": {
+          "version": "3",
+          "uniqueid": "1",
+          "o-outbox": {
+            "split": "5000",
+            "width": "5000"
+          },
+          "a-graphitem": [
+            {
+              "id": "1000",
+              "o-attributes": {
+                "o-sheetid": {
+                  "v": "ryNIvPq-Du",
+                  "t": "s"
+                }
+              },
+              "o-pin": {
+                "o-p": {
+                  "o-x": {
+                    "v": "11000"
+                  },
+                  "o-y": {
+                    "v": "7000"
+                  }
+                },
+                "o-lp": {
+                  "o-x": {
+                    "f": "WIDTH%20*%200.5",
+                    "v": "10500"
+                  },
+                  "o-y": {
+                    "f": "HEIGHT%20*%200.5",
+                    "v": "6500"
+                  }
+                }
+              },
+              "o-size": {
+                "o-w": {
+                  "v": "21000"
+                },
+                "o-h": {
+                  "v": "13000"
+                }
+              },
+              "o-inbox": {
+                "split": "5000",
+                "width": "6164"
+              },
+              "o-processsheet": {
+                "o-attributes": {
+                  "o-calcondemand": {
+                    "v": "true",
+                    "t": "b"
+                  }
+                },
+                "o-name": {
+                  "v": "S1",
+                  "t": "s"
+                },
+                "o-rows": {
+                  "outline": "above"
+                },
+                "o-columns": {
+                  "outline": "above",
+                  "a-section": [
+                    {
+                      "index": "0",
+                      "size": "0",
+                      "visible": "0"
+                    },
+                    {
+                      "index": "1",
+                      "size": "700",
+                      "visible": "1"
+                    },
+                    {
+                      "index": "3",
+                      "size": "2000",
+                      "visible": "1",
+                      "o-t": {
+                        "o-numberformat": {
+                          "v": "0.0",
+                          "t": "s"
+                        },
+                        "o-localculture": {
+                          "v": "number%3B1%3Bfalse",
+                          "t": "s"
+                        }
+                      }
+                    },
+                    {
+                      "index": "6",
+                      "size": "2000",
+                      "visible": "1",
+                      "o-t": {
+                        "o-numberformat": {
+                          "v": "0.0",
+                          "t": "s"
+                        },
+                        "o-localculture": {
+                          "v": "number%3B1%3Bfalse",
+                          "t": "s"
+                        }
+                      }
+                    }
+                  ]
+                },
+                "o-defaultcell": {
+                  "o-cell": {}
+                },
+                "o-data": {
+                  "a-r": [
+                    {
+                      "n": "3",
+                      "a-c": [
+                        {
+                          "n": "4",
+                          "o-cell": {
+                            "o-t": {
+                              "o-numberformat": {
+                                "v": "0~25",
+                                "t": "s"
+                              },
+                              "o-localculture": {
+                                "v": "percent",
+                                "t": "s"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "o-images": {}
+        },
+        "machineId": "HyZUPv9Wwd"
+      }
+    }
+  ],
+  "streams": [
+    {
+      "id": "HJgcyj9Zvu",
+      "name": "MQTT_Connector_Linuxwochen_Eisenstadt",
+      "disabled": false,
+      "className": "ConnectorConfiguration",
+      "lastModified": "2021-04-24T13:21:09.426Z",
+      "lastAccessed": "2021-04-24T13:19:30.494Z",
+      "provider": {
+        "_id": "@cedalo/stream-mqtt",
+        "id": "@cedalo/stream-mqtt",
+        "className": "ProviderConfiguration",
+        "isRef": true
+      },
+      "protocolVersion": 4,
+      "url": "mqtt://mosquitto",
+      "userPropertiesConnect": [],
+      "userName": "streamsheets",
+      "password": "o8G5EWLMiT",
+      "baseTopic": "",
+      "retain": false,
+      "qos": 0,
+      "scope": {
+        "id": "root"
+      },
+      "state": "disconnected"
+    },
+    {
+      "id": "SkxlSs9WDd",
+      "name": "MQTT_Consumer_Linuxwochen_Eisenstadt",
+      "className": "ConsumerConfiguration",
+      "lastModified": "2021-04-24T13:21:09.514Z",
+      "lastAccessed": "2021-04-24T13:20:56.101Z",
+      "connector": {
+        "_id": "HJgcyj9Zvu",
+        "id": "HJgcyj9Zvu",
+        "className": "ConnectorConfiguration",
+        "disabled": false,
+        "lastModified": "2021-04-24T13:19:30.494Z",
+        "lastAccessed": "2021-04-24T13:19:30.494Z",
+        "isRef": true
+      },
+      "providerId": "@cedalo/stream-mqtt",
+      "mimeType": "auto",
+      "fixedClientId": false,
+      "clientId": "",
+      "clean": true,
+      "userPropertiesSubscribe": [],
+      "topics": [
+        "tutorial/joy1"
+      ],
+      "scope": {
+        "id": "root"
+      },
+      "state": "connected"
+    },
+    {
+      "id": "ryexXEs-DO",
+      "name": "MQTT_Producer_Linuxwochen_Eisenstadt",
+      "disabled": false,
+      "className": "ProducerConfiguration",
+      "lastModified": "2021-04-24T13:58:52.924Z",
+      "lastAccessed": "2021-04-24T13:58:48.161Z",
+      "connector": {
+        "_id": "HJgcyj9Zvu",
+        "id": "HJgcyj9Zvu",
+        "className": "ConnectorConfiguration",
+        "disabled": false,
+        "lastModified": "2021-04-24T13:21:09.426Z",
+        "lastAccessed": "2021-04-24T13:19:30.494Z",
+        "isRef": true
+      },
+      "providerId": "@cedalo/stream-mqtt",
+      "mimeType": "auto",
+      "fixedClientId": false,
+      "clientId": "",
+      "clean": true,
+      "pubTopic": "",
+      "userPropertiesProduce": [],
+      "scope": {
+        "id": "root"
+      },
+      "state": "connected"
+    }
+  ]
+}
